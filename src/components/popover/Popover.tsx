@@ -18,16 +18,19 @@ export const Popover = ({
   hasIcon?: boolean;
 }) => {
   return (
-    <PopoverUI className={`relative ${className}`}>
+    <PopoverUI className={`${className}`}>
       {({ open, close }) => (
         <>
-          <PopoverUI.Button className="px-5 py-4 focus:outline-none bg-dark rounded-primary">
+          <PopoverUI.Button className="relative px-5 py-4 focus:outline-none bg-dark rounded-primary">
             {trigger}
             {hasIcon && (
               <Icon icon={open ? "solid-angle-up-small" : "solid-angle-down-small"} className="w-6 h-6 ml-2" />
             )}
           </PopoverUI.Button>
-          <PopoverUI.Overlay className="fixed inset-0 bg-black opacity-60" />
+          <PopoverUI.Overlay className="fixed inset-0 bg-black/60" />
+          {open && (
+            <div className="absolute z-20 top-12 border-[28px] border-b-dark border-r-transparent border-l-transparent border-t-transparent" />
+          )}
           <Transition
             as={Fragment}
             enter="transition ease-out duration-200"
@@ -38,7 +41,7 @@ export const Popover = ({
             leaveTo="opacity-0 translate-y-1"
           >
             <PopoverUI.Panel
-              className={`absolute right-2 z-10 mt-3 w-max px-4 text-white py-9 bg-dark rounded-3xl lg:px-8 overflow-hidden ${contentClassName}`}
+              className={`absolute right-4 z-10 mt-3 w-max px-4 text-white py-9 bg-dark rounded-3xl lg:px-8 ${contentClassName}`}
             >
               <div className="flex items-center gap-7">
                 <button className="flex items-center justify-center bg-black h-11 w-11 rounded-xl" onClick={close}>
