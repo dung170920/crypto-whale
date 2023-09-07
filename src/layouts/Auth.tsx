@@ -5,7 +5,7 @@ export const Auth = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="container lg:px-[218px] h-screen w-screen">
         <Outlet />
       </main>
     </>

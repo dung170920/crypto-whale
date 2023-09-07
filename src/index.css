@@ -6,6 +6,12 @@
 
 @layer base {
   body {
-    @apply font-serif text-base bg-dark text-white;
+    @apply font-serif text-base text-white bg-dark;
   }
+}
+
+@layer components {
+  /* .text-lg-600 {
+    @apply text-lg font-semibold;
+  } */
 }

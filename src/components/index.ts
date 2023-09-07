@@ -1,5 +1,6 @@
 export * from "./Icon";
 export * from "./Loading";
-export * from "./Header";
+export * from "./header/Header";
 export * from "./Logo";
 export * from "./error-boundary/ErrorBoundary";
+export * from "./popover/Popover";

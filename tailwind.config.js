@@ -12,6 +12,9 @@ export default {
       fontSize: {
         "2xs": "10px",
       },
+      borderRadius: {
+        primary: "20px",
+      },
       colors: {
         primary: "#0CAF60",
         dark: "#161D26",
