@@ -1,6 +1,7 @@
 import { Icon, Logo } from "@/components";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import ReactCountryFlag from "react-country-flag";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   const links = [
@@ -37,7 +38,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="flex items-center justify-between px-5 py-5 bg-black md:px-28">
+    <header className="flex items-center justify-between px-5 py-5 bg-black lg:px-28">
       <div className="flex items-center gap-8">
         <Logo />
         <button>
@@ -45,20 +46,30 @@ export const Header = () => {
         </button>
         <div className="flex gap-6">
           {links.map((e) => (
-            <Link
+            <NavLink
               to={e.to}
               key={e.to}
-              className={classNames("hover:text-primary transition-colors", {
-                "relative after:absolute after:-top-5 after:-right-9 after:text-white after:bg-orange after:content-['New'] after:px-[6px] after:py-[2px] after:rounded-md after:text-[10px] mr-6":
-                  e.isNew,
-              })}
+              className={({ isActive }) =>
+                classNames(
+                  "hover:text-primary transition-colors",
+                  {
+                    "relative after:absolute after:-top-5 after:-right-9 after:text-white after:bg-orange after:content-['New'] after:px-[6px] after:rounded-md after:text-2xs mr-7 before:border-8 before:border-orange before:border-t-transparent before:border-r-transparent before:border-b-transparent before:absolute before:-top-2 before:-right-6":
+                      e.isNew,
+                  },
+                  { "text-primary": isActive }
+                )
+              }
             >
               {e.text}
-            </Link>
+            </NavLink>
           ))}
         </div>
       </div>
-      <div className="">Language</div>
+      <button className="hidden px-5 py-4 lg:block bg-dark rounded-3xl">
+        <ReactCountryFlag countryCode="GB" svg className="object-cover !w-6 !h-6 mr-3 rounded-full" />
+        <span className="text-sm">English</span>
+        <Icon icon="solid-angle-down-small" className="w-6 h-6 ml-2" />
+      </button>
     </header>
   );
 };

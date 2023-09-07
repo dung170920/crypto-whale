@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         serif: "'Poppins', sans-serif",
       },
+      fontSize: {
+        "2xs": "10px",
+      },
       colors: {
         primary: "#0CAF60",
         dark: "#161D26",
