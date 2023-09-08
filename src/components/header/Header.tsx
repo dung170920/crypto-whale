@@ -52,7 +52,7 @@ export const Header = () => {
   const [language, setLanguage] = useState(languages[0]);
 
   return (
-    <header className="flex items-center justify-between px-5 py-5 bg-black lg:px-28">
+    <header className="flex items-center justify-between px-5 py-5 bg-gray-800 lg:px-28">
       <div className="flex items-center gap-8">
         <Logo />
         <button>
@@ -107,13 +107,13 @@ export const Header = () => {
                   {e.code === language.code && (
                     <Icon
                       icon="solid-check-circle"
-                      className="absolute w-6 h-6 border-4 border-black rounded-full -top-1 -right-1 text-primary bg-dark"
+                      className="absolute w-6 h-6 border-4 border-gray-800 rounded-full -top-1 -right-1 text-primary bg-gray-700"
                     />
                   )}
                   <ReactCountryFlag
                     countryCode={e.code}
                     svg
-                    className="object-cover !w-11 !h-11 rounded-full border-6 border-black"
+                    className="object-cover !w-11 !h-11 rounded-full border-6 border-gray-800"
                   />
                 </div>
 

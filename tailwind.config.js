@@ -14,11 +14,17 @@ export default {
       },
       borderRadius: {
         primary: "20px",
+        "4xl": "28px",
+        "5xl": "32px",
+        "6xl": "36px",
       },
       colors: {
         primary: "#0CAF60",
-        dark: "#161D26",
-        black: "#12181F",
+        gray: {
+          700: "#161D26",
+          800: "#12181F",
+          900: "#0B0E13",
+        },
         secondary: "#A4A8AB",
         purple: {
           DEFAULT: "#674AFF",

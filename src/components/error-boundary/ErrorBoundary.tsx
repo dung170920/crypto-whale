@@ -7,7 +7,7 @@ export const Error = ({ error }: FallbackProps) => {
       <div className="lg:w-[650px] w-min p-14 bg-white rounded-xl">
         <Bug className="h-[300px] w-[300px] mx-auto" />
         <h2 className="mb-4 text-3xl font-bold text-red">System Error</h2>
-        <p className="text-black">{error.message}</p>
+        <p className="text-gray-800">{error.message}</p>
       </div>
     </div>
   );
