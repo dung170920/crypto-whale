@@ -28,6 +28,14 @@
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: inset 0 0 20px 20px #23232329;
   }
+
+  *::-webkit-scrollbar {
+    @apply w-2 h-2 bg-transparent hover:bg-white/10 rounded-full;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full;
+  }
 }
 
 @layer components {

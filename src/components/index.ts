@@ -12,4 +12,5 @@ export * from "./popover/Popover";
 
 export * from "./form/Input";
 
-export * from "./button/Button";
+export * from "./buttons/Button";
+export * from "./buttons/IconButton";
