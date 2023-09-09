@@ -1,6 +1,14 @@
-# React + TypeScript + Vite
+# Crypto Whale
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Information
+
+![Preview](https://github.com/dung170920/crypto-whale/blob/main/src/assets/preview.jpg)
+
+- Design: [Crypto Whale - Crypto & NFT Dashboard UI Kit](https://ui8.net/uimonster/products/crypto-whale-crypto-dashboard-ui-kit)
+
+## Technologies
+
+This template provides a minimal setup to get React + TypeScript working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
 
