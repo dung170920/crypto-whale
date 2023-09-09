@@ -16,6 +16,7 @@ const loadable = (Component: LazyExoticComponent<() => JSX.Element>) => (props: 
 
 const LoginPage = loadable(lazy(() => import("@/pages/Login")));
 const RegisterPage = loadable(lazy(() => import("@/pages/Register")));
+const ForgotPasswordPage = loadable(lazy(() => import("@/pages/ForgotPassword")));
 const DashboardPage = loadable(lazy(() => import("@/pages/Dashboard")));
 
 export default function Router() {
@@ -36,6 +37,10 @@ export default function Router() {
         {
           path: "signup",
           element: <RegisterPage />,
+        },
+        {
+          path: "forgot-password",
+          element: <ForgotPasswordPage />,
         },
       ],
     },

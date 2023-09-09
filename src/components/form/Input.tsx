@@ -13,7 +13,7 @@ export const Input = ({ label, name, placeholder, icon, isPassword = false }: In
   const [inputVisibility, setInputVisibility] = useState(false);
 
   return (
-    <div className="mb-5">
+    <div className="mb-4">
       <label htmlFor={name} className="font-semibold">
         {label}
       </label>

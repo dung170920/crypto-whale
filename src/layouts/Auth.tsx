@@ -1,15 +1,18 @@
 import { QrCode } from "@/assets";
 import { Header, Icon } from "@/components";
-import { Routes } from "@/routes";
-import classNames from "classnames";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export const Auth = () => {
   const location = useLocation();
+  const texts = [
+    { path: "/auth/login", title: "Welcome back", subTitle: "Please enter your email and password." },
+    { path: "/auth/signup", title: "Create Your Account", subTitle: "Setting up an account takes less than 1 minute." },
 
-  const tabs = [
-    { name: "Login", href: Routes.login },
-    { name: "Sign Up", href: "/auth/signup" },
+    {
+      path: "/auth/forgot-password",
+      title: "Forgot password",
+      subTitle: "Enter your email below, you will receive an email with password reset link.",
+    },
   ];
 
   return (
@@ -18,27 +21,9 @@ export const Auth = () => {
       <main className="py-5 px-5 container xl:px-[300px] lg:py-8 h-full overflow-hidden">
         <section className="bg-gray-900 p-4 rounded-6xl flex h-full">
           <div className="w-1/2 bg-gray-800 px-16 py-8 rounded-6xl h-full overflow-y-auto flex flex-col">
-            <h2 className="text-title">
-              {location.pathname !== "/auth/login" ? "Create Your Account" : "Welcome back"}
-            </h2>
-            <p className="text-secondary mt-1 mb-4">
-              {location.pathname === "/auth/login"
-                ? "Please Enter your email and password"
-                : "Setting up an account takes less than 1 minute."}
-            </p>
-            <ul className="hidden sm:flex gap-2 bg-gray-700 w-fit px-2 py-[6px] rounded-primary mb-5">
-              {tabs.map((tab) => (
-                <NavLink
-                  key={tab.name}
-                  to={tab.href}
-                  className={({ isActive }) =>
-                    classNames({ "bg-primary ": isActive }, "py-[7px] px-[18px] text-sm rounded-2xl text-white")
-                  }
-                >
-                  {tab.name}
-                </NavLink>
-              ))}
-            </ul>
+            <h2 className="text-title">{texts.find((e) => e.path === location.pathname)?.title}</h2>
+            <p className="text-secondary mt-1 mb-2">{texts.find((e) => e.path === location.pathname)?.subTitle}</p>
+
             <Outlet />
           </div>
 
