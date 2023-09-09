@@ -1,13 +1,15 @@
-export * from "./Icon";
+export * from "./icon/Icon";
 
-export * from "./Loading";
+export * from "./loading/Loading";
 
 export * from "./header/Header";
 
-export * from "./Logo";
+export * from "./logo/Logo";
 
 export * from "./error-boundary/ErrorBoundary";
 
 export * from "./popover/Popover";
 
 export * from "./form/Input";
+
+export * from "./button/Button";
