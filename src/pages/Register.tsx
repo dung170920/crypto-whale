@@ -1,11 +1,11 @@
 import { Button, Icon, Input } from "@/components";
-import { Routes } from "@/routes";
+import { RouteList } from "@/routes";
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
 
 const Register = () => {
   const tabs = [
-    { name: "Login", href: Routes.login },
+    { name: "Login", href: RouteList.login },
     { name: "Sign Up", href: "/auth/signup" },
   ];
   return (
