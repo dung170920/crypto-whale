@@ -1,6 +1,6 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, RouteObject } from "react-router-dom";
 import { lazy } from "react";
-import { Auth } from "@/layouts";
+import { Auth, Blank } from "@/layouts";
 
 const LoginPage = lazy(() => import("@/pages/Login"));
 const RegisterPage = lazy(() => import("@/pages/Register"));
@@ -8,7 +8,9 @@ const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPassword"));
 const AuthConfirmPage = lazy(() => import("@/pages/AuthConfirm"));
 const VerificationCodePage = lazy(() => import("@/pages/VerificationCode"));
 
-export const PublicRoutes = [
+const NotFoundPage = lazy(() => import("@/pages/NotFound"));
+
+export const PublicRoutes: RouteObject[] = [
   {
     path: "auth",
     element: <Auth />,
@@ -37,6 +39,14 @@ export const PublicRoutes = [
         path: "verfication",
         element: <VerificationCodePage />,
       },
+    ],
+  },
+  {
+    path: "*",
+    element: <Blank />,
+    children: [
+      { path: "404", element: <NotFoundPage /> },
+      { path: "*", element: <Navigate to="404" replace /> },
     ],
   },
 ];
