@@ -14,10 +14,9 @@ const Loadable = () => (
   </Suspense>
 );
 
-export default function Router() {
+export function Router() {
   return useRoutes([
     {
-      path: "/",
       element: <Loadable />,
       children: [...PrivateRoutes, ...PublicRoutes],
     },

@@ -5,7 +5,6 @@ import { Auth, Blank } from "@/layouts";
 const LoginPage = lazy(() => import("@/pages/Login"));
 const RegisterPage = lazy(() => import("@/pages/Register"));
 const ForgotPasswordPage = lazy(() => import("@/pages/ForgotPassword"));
-const AuthConfirmPage = lazy(() => import("@/pages/AuthConfirm"));
 const VerificationCodePage = lazy(() => import("@/pages/VerificationCode"));
 
 const NotFoundPage = lazy(() => import("@/pages/NotFound"));
@@ -17,7 +16,7 @@ export const PublicRoutes: RouteObject[] = [
     children: [
       {
         index: true,
-        element: <Navigate to={"login"} replace />,
+        element: <Navigate to="login" replace />,
       },
       {
         path: "login",
@@ -32,11 +31,7 @@ export const PublicRoutes: RouteObject[] = [
         element: <ForgotPasswordPage />,
       },
       {
-        path: "confirm",
-        element: <AuthConfirmPage />,
-      },
-      {
-        path: "verfication",
+        path: "verification",
         element: <VerificationCodePage />,
       },
     ],

@@ -11,6 +11,7 @@ export * from "./error-boundary/ErrorBoundary";
 export * from "./popover/Popover";
 
 export * from "./form/Input";
+export * from "./form/CodeInput";
 
 export * from "./buttons/Button";
 export * from "./buttons/IconButton";

@@ -1,13 +1,16 @@
 import { Button, Icon, Input } from "@/components";
 import { RouteList } from "@/routes";
 import classNames from "classnames";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const tabs = [
     { name: "Login", href: RouteList.login },
     { name: "Sign Up", href: "/auth/signup" },
   ];
+
   return (
     <>
       <ul className="hidden sm:flex gap-2 bg-gray-700 w-fit px-2 py-[6px] rounded-primary mb-3">
@@ -23,14 +26,18 @@ const Register = () => {
           </NavLink>
         ))}
       </ul>
-      <form onSubmit={() => {}}>
+      <form
+        onSubmit={() => {
+          navigate("/auth/verification");
+        }}
+      >
         <Input name="email" placeholder="Email Address" icon="envelope" />
         <Input name="password" placeholder="Password" icon="lock" isPassword />
         <Input name="code" placeholder="Referral code (Optional)" icon="user" />
         <Button size="md" type="filled" className="flex items-center justify-center">
           <span className="flex-1">Continue</span>
-          <div className="p-2 bg-white/20 rounded-xl flex items-center justify-center">
-            <Icon icon="solid-arrow-right" className="h-4 w-4" />
+          <div className="flex items-center justify-center p-2 bg-white/20 rounded-xl">
+            <Icon icon="solid-arrow-right" className="w-4 h-4" />
           </div>
         </Button>
       </form>
