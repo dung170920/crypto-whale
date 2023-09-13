@@ -1,3 +1,4 @@
+import { path } from "@/constants";
 import { Main } from "@/layouts";
 import { lazy } from "react";
 import { Navigate, RouteObject } from "react-router-dom";
@@ -5,9 +6,9 @@ import { Navigate, RouteObject } from "react-router-dom";
 const DashboardPage = lazy(() => import("@/pages/Dashboard"));
 
 const Authenticated = ({ children }: { children: React.ReactElement }) => {
-  const auth = false;
+  const auth = true;
 
-  return auth ? children : <Navigate to="/auth/login" />;
+  return auth ? children : <Navigate to={path.login} />;
 };
 
 export const PrivateRoutes: RouteObject[] = [

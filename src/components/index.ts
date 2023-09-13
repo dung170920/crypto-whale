@@ -4,6 +4,8 @@ export * from "./loading/Loading";
 
 export * from "./header/Header";
 
+export * from "./sidebar/Sidebar";
+
 export * from "./logo/Logo";
 
 export * from "./error-boundary/ErrorBoundary";

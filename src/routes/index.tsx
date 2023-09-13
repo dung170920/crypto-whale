@@ -4,10 +4,6 @@ import { Loading } from "@/components";
 import { PublicRoutes } from "./PublicRoutes";
 import { PrivateRoutes } from "./PrivateRoutes";
 
-export const RouteList = {
-  login: "/auth/login",
-};
-
 const Loadable = () => (
   <Suspense fallback={<Loading />}>
     <Outlet />

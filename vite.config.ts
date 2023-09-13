@@ -16,5 +16,10 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
     },
   },
-  plugins: [react(), svgr()],
+  plugins: [
+    react({
+      include: "**/*.tsx",
+    }),
+    svgr(),
+  ],
 });

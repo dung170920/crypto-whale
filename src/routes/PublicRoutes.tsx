@@ -1,6 +1,7 @@
 import { Navigate, RouteObject } from "react-router-dom";
 import { lazy } from "react";
 import { Auth, Blank } from "@/layouts";
+import { path } from "@/constants";
 
 const LoginPage = lazy(() => import("@/pages/Login"));
 const RegisterPage = lazy(() => import("@/pages/Register"));
@@ -11,37 +12,37 @@ const NotFoundPage = lazy(() => import("@/pages/NotFound"));
 
 export const PublicRoutes: RouteObject[] = [
   {
-    path: "auth",
+    path: path.auth,
     element: <Auth />,
     children: [
       {
-        index: true,
-        element: <Navigate to="login" replace />,
+        path: path.auth,
+        element: <Navigate to={path.login} replace />,
       },
       {
-        path: "login",
+        path: path.login,
         element: <LoginPage />,
       },
       {
-        path: "signup",
+        path: path.signup,
         element: <RegisterPage />,
       },
       {
-        path: "forgot-password",
+        path: path.forgotPassword,
         element: <ForgotPasswordPage />,
       },
       {
-        path: "verification",
+        path: path.verification,
         element: <VerificationCodePage />,
       },
     ],
   },
   {
-    path: "*",
+    path: path.error,
     element: <Blank />,
     children: [
-      { path: "404", element: <NotFoundPage /> },
-      { path: "*", element: <Navigate to="404" replace /> },
+      { path: path.notFound, element: <NotFoundPage /> },
+      { path: path.error, element: <Navigate to={path.notFound} replace /> },
     ],
   },
 ];

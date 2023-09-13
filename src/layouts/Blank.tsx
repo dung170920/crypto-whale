@@ -1,3 +1,4 @@
+import { path } from "@/constants";
 import { Link, Outlet } from "react-router-dom";
 
 export const Blank = () => {
@@ -6,7 +7,7 @@ export const Blank = () => {
       <div className="lg:w-[650px] w-min p-14 bg-white rounded-xl flex flex-col items-center">
         <Outlet />
 
-        <Link to="/" className="px-6 py-3 mt-10 text-white rounded-md bg-primary w-fit">
+        <Link to={path.home} className="px-6 py-3 mt-10 text-white rounded-md bg-primary w-fit">
           Go Home
         </Link>
       </div>

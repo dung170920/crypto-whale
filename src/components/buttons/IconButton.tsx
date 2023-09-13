@@ -32,8 +32,8 @@ export const IconButton = ({
     },
 
     // Sizes
-    sm: "p-2",
-    md: "p-3",
+    sm: "p-3",
+    md: "p-[18px]",
   };
 
   return (
@@ -41,7 +41,7 @@ export const IconButton = ({
       disabled={disabled}
       onClick={onClick}
       className={classNames(
-        "text-2xl w-fit",
+        "flex items-center justify-center",
         buttonConfig[size],
         type === "outlined" ? buttonConfig[color].outline : buttonConfig[color].bgColor,
         `rounded-primary ${className}`,
@@ -50,7 +50,7 @@ export const IconButton = ({
         }
       )}
     >
-      {typeof icon === "string" ? <Icon icon={icon} /> : icon}
+      {typeof icon === "string" ? <Icon icon={icon} className="w-6 h-6" /> : icon}
     </button>
   );
 };

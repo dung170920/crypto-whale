@@ -1,14 +1,14 @@
 import { Button, Input, Icon, IconButton } from "@/components";
 import { Apple, FB, Google } from "@/assets";
 import { Link, NavLink } from "react-router-dom";
-import { RouteList } from "@/routes";
 import classNames from "classnames";
+import { path } from "@/constants";
 
 const Login = () => {
   const loginMethods = [FB, Apple, Google];
   const tabs = [
-    { name: "Login", href: RouteList.login },
-    { name: "Sign Up", href: "/auth/signup" },
+    { name: "Login", href: path.login },
+    { name: "Sign Up", href: path.signup },
   ];
 
   return (
@@ -30,7 +30,7 @@ const Login = () => {
         <form onSubmit={() => {}}>
           <Input name="email" placeholder="Email Address" icon="envelope" />
           <Input name="password" placeholder="Password" icon="lock" isPassword />
-          <Link to="/auth/forgot-password" className="float-right mb-3 text-sm text-primary">
+          <Link to={path.forgotPassword} className="float-right mb-3 text-sm text-primary">
             Forgot Password?
           </Link>
           <Button size="md" type="filled" className="flex items-center justify-center">

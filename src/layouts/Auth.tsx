@@ -1,20 +1,21 @@
 import { QrCode } from "@/assets";
 import { Header, Icon } from "@/components";
+import { path } from "@/constants";
 import { Outlet, useLocation } from "react-router-dom";
 
 export const Auth = () => {
   const location = useLocation();
 
   const texts = [
-    { path: "/auth/login", title: "Welcome back", subTitle: "Please enter your email and password." },
-    { path: "/auth/signup", title: "Create Your Account", subTitle: "Setting up an account takes less than 1 minute." },
+    { path: path.login, title: "Welcome back", subTitle: "Please enter your email and password." },
+    { path: path.signup, title: "Create Your Account", subTitle: "Setting up an account takes less than 1 minute." },
     {
-      path: "/auth/forgot-password",
+      path: path.forgotPassword,
       title: "Forgot password",
       subTitle: "Enter your email below, you will receive an email with password reset link.",
     },
     {
-      path: "/auth/verification",
+      path: path.verification,
       title: "Email Verification",
       subTitle: "Please enter the 4-digit verification code that was sent to your email.",
     },

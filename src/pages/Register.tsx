@@ -1,5 +1,5 @@
 import { Button, Icon, Input } from "@/components";
-import { RouteList } from "@/routes";
+import { path } from "@/constants";
 import classNames from "classnames";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -7,8 +7,8 @@ const Register = () => {
   const navigate = useNavigate();
 
   const tabs = [
-    { name: "Login", href: RouteList.login },
-    { name: "Sign Up", href: "/auth/signup" },
+    { name: "Login", href: path.login },
+    { name: "Sign Up", href: path.signup },
   ];
 
   return (
@@ -28,7 +28,7 @@ const Register = () => {
       </ul>
       <form
         onSubmit={() => {
-          navigate("/auth/verification");
+          navigate(path.verification);
         }}
       >
         <Input name="email" placeholder="Email Address" icon="envelope" />
