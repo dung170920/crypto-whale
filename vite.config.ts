@@ -7,6 +7,9 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   server: {
     port: 3000,
+    watch: {
+      usePolling: true,
+    },
   },
   css: {
     devSourcemap: true,
@@ -16,10 +19,5 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
     },
   },
-  plugins: [
-    react({
-      include: "**/*.tsx",
-    }),
-    svgr(),
-  ],
+  plugins: [react(), svgr()],
 });

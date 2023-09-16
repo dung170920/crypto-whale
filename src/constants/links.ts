@@ -1,7 +1,7 @@
 export const navLinks = [
   {
     text: "Buy Crypto",
-    to: "/buy-crypto",
+    to: "/crypto",
     isNew: false,
   },
   {
@@ -28,5 +28,63 @@ export const navLinks = [
     text: "Blog",
     to: "/blog",
     isNew: false,
+  },
+];
+
+export const sideLinks = [
+  {
+    title: "",
+    children: [
+      {
+        text: "Dashboard",
+        to: "/",
+        icon: "grid-square",
+      },
+      {
+        text: "Exchange",
+        to: "/exchange",
+        icon: "exchange-horizontal-circle",
+      },
+      {
+        text: "Live prices",
+        to: "/prices",
+        icon: "trend-up-circle",
+      },
+      {
+        text: "Wallet",
+        to: "/wallet",
+        icon: "wallet",
+      },
+      {
+        text: "NFT Market",
+        to: "/nft",
+        icon: "store",
+      },
+      {
+        text: "Transaction",
+        to: "/transaction",
+        icon: "activity-circle",
+      },
+      {
+        text: "Settings",
+        to: "/settings",
+        icon: "settings",
+      },
+      {
+        text: "News",
+        to: "/news",
+        icon: "document",
+      },
+    ],
+  },
+  {
+    title: "Insignts",
+    children: [
+      {
+        text: "Inbox",
+        to: "/inobx",
+        icon: "comment",
+      },
+    ],
   },
 ];

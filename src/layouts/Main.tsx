@@ -3,11 +3,15 @@ import { Outlet } from "react-router-dom";
 
 export const Main = () => {
   return (
-    <div className="flex">
+    <div className="flex w-screen h-screen">
       <Sidebar />
-      <div className="flex-1">
+      <div className="flex flex-col flex-1 h-full">
         <Header />
-        <Outlet />
+        <div className="h-full overflow-y-auto">
+          <div className="h-[5000px]">
+            <Outlet />
+          </div>
+        </div>
       </div>
     </div>
   );

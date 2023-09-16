@@ -19,7 +19,7 @@ const Login = () => {
             key={tab.name}
             to={tab.href}
             className={({ isActive }) =>
-              classNames({ "bg-primary ": isActive }, "py-[7px] px-[18px] text-sm rounded-2xl text-white")
+              classNames({ "bg-primary ": isActive }, "py-[7px] px-[18px] text-xs rounded-2xl text-white")
             }
           >
             {tab.name}

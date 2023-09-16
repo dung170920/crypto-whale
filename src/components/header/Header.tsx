@@ -11,7 +11,7 @@ export const Header = () => {
   const [language, setLanguage] = useState(languages[0]);
 
   return (
-    <header className="flex items-center justify-between px-5 py-5 bg-gray-800 lg:px-28">
+    <header className="flex items-center justify-between px-10 py-5 bg-gray-800">
       <div className="flex items-center gap-8">
         {!isAuthenticated && <Logo />}
         <button>
