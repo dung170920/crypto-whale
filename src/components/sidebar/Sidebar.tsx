@@ -28,32 +28,27 @@ export const Sidebar = () => {
           </p>
         </div>
         <div className="w-full px-6 mt-4 overflow-y-auto">
-          <div className="mb-4">
+          <ul className="flex flex-col w-full h-full">
             {sideLinks.map((child) => (
-              <ul className="flex flex-col w-full h-full">
-                <NavLink
-                  to={child.to}
-                  className={({ isActive }) =>
-                    classNames(
-                      "px-5 py-3.5 rounded-primary w-full",
-                      isActive ? "bg-primary font-bold" : "bg-transparent"
-                    )
-                  }
-                  key={child.to}
+              <NavLink
+                to={child.to}
+                className={({ isActive }) =>
+                  classNames("px-5 py-3.5 rounded-primary w-full", isActive ? "bg-primary font-bold" : "bg-transparent")
+                }
+                key={child.to}
+              >
+                <Icon icon={child.icon} className="w-6 h-6 mr-3" />
+                <span
+                  className={classNames({
+                    "relative after:absolute after:-top-5 after:-right-9 after:text-white after:bg-orange after:content-['New'] after:px-[6px] after:rounded-md after:text-2xs mr-7 before:border-8 before:border-orange before:border-t-transparent before:border-r-transparent before:border-b-transparent before:absolute before:-top-2 before:-right-6":
+                      child.isNew,
+                  })}
                 >
-                  <Icon icon={child.icon} className="w-6 h-6 mr-3" />
-                  <span
-                    className={classNames({
-                      "relative after:absolute after:-top-5 after:-right-9 after:text-white after:bg-orange after:content-['New'] after:px-[6px] after:rounded-md after:text-2xs mr-7 before:border-8 before:border-orange before:border-t-transparent before:border-r-transparent before:border-b-transparent before:absolute before:-top-2 before:-right-6":
-                        child.isNew,
-                    })}
-                  >
-                    {child.text}
-                  </span>
-                </NavLink>
-              </ul>
+                  {child.text}
+                </span>
+              </NavLink>
             ))}
-          </div>
+          </ul>
           <div className="flex flex-col">
             <span className="text-sm">Insignts</span>
             <NavLink

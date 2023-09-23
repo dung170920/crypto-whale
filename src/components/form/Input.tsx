@@ -15,10 +15,10 @@ export const Input = ({ label, name, placeholder, icon, isPassword = false, clas
 
   return (
     <div className={`mb-4 ${className}`}>
-      <label htmlFor={name} className="font-semibold">
+      <label htmlFor={name} className="font-semibold mb-2">
         {label}
       </label>
-      <div className="relative flex items-center px-5 mt-2 bg-gray-700 border border-transparent rounded-3xl focus-within:border-primary focus-within:ring-primary">
+      <div className="relative flex items-center px-5 bg-gray-700 border border-transparent rounded-3xl focus-within:border-primary focus-within:ring-primary">
         {icon && (
           <div className="pr-3 border-r border-gray-500">
             <Icon className="w-6 h-6 text-white" icon={icon} />

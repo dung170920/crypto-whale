@@ -7,10 +7,8 @@ export const Main = () => {
       <Sidebar />
       <div className="flex flex-col flex-1 h-full">
         <Header />
-        <div className="h-full overflow-y-auto">
-          <div className="h-[1000px]">
-            <Outlet />
-          </div>
+        <div className="h-full overflow-y-auto py-8 px-6">
+          <Outlet />
         </div>
       </div>
     </div>
