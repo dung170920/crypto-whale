@@ -33,58 +33,51 @@ export const navLinks = [
 
 export const sideLinks = [
   {
-    title: "",
-    children: [
-      {
-        text: "Dashboard",
-        to: "/",
-        icon: "grid-square",
-      },
-      {
-        text: "Exchange",
-        to: "/exchange",
-        icon: "exchange-horizontal-circle",
-      },
-      {
-        text: "Live prices",
-        to: "/prices",
-        icon: "trend-up-circle",
-      },
-      {
-        text: "Wallet",
-        to: "/wallet",
-        icon: "wallet",
-      },
-      {
-        text: "NFT Market",
-        to: "/nft",
-        icon: "store",
-      },
-      {
-        text: "Transaction",
-        to: "/transaction",
-        icon: "activity-circle",
-      },
-      {
-        text: "Settings",
-        to: "/settings",
-        icon: "settings",
-      },
-      {
-        text: "News",
-        to: "/news",
-        icon: "document",
-      },
-    ],
+    text: "Dashboard",
+    to: "/",
+    icon: "grid-square",
+    isNew: false,
   },
   {
-    title: "Insignts",
-    children: [
-      {
-        text: "Inbox",
-        to: "/inobx",
-        icon: "comment",
-      },
-    ],
+    text: "Exchange",
+    to: "/exchange",
+    icon: "exchange-horizontal-circle",
+    isNew: false,
+  },
+  {
+    text: "Live prices",
+    to: "/prices",
+    icon: "trend-up-circle",
+    isNew: false,
+  },
+  {
+    text: "Wallet",
+    to: "/wallet",
+    icon: "wallet",
+    isNew: false,
+  },
+  {
+    text: "NFT Market",
+    to: "/nft",
+    icon: "store",
+    isNew: true,
+  },
+  {
+    text: "Transaction",
+    to: "/transaction",
+    icon: "activity-circle",
+    isNew: false,
+  },
+  {
+    text: "Settings",
+    to: "/settings",
+    icon: "settings",
+    isNew: false,
+  },
+  {
+    text: "News",
+    to: "/news",
+    icon: "document",
+    isNew: false,
   },
 ];

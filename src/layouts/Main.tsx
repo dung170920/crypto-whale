@@ -8,7 +8,7 @@ export const Main = () => {
       <div className="flex flex-col flex-1 h-full">
         <Header />
         <div className="h-full overflow-y-auto">
-          <div className="h-[5000px]">
+          <div className="h-[1000px]">
             <Outlet />
           </div>
         </div>

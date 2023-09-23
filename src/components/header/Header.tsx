@@ -1,4 +1,4 @@
-import { Icon, IconButton, Logo, Popover } from "@/components";
+import { Icon, IconButton, Input, Logo, Popover } from "@/components";
 import { languages, navLinks } from "@/constants";
 import classNames from "classnames";
 import { useState } from "react";
@@ -11,14 +11,14 @@ export const Header = () => {
   const [language, setLanguage] = useState(languages[0]);
 
   return (
-    <header className="flex items-center justify-between px-10 py-5 bg-gray-800">
+    <header className="flex items-center justify-between px-10 py-4 bg-gray-800">
       <div className="flex items-center gap-8">
         {!isAuthenticated && <Logo />}
         <button>
           <Icon icon="solid-grid-2" className="w-6 h-6" />
         </button>
         {isAuthenticated ? (
-          <span>Search bar</span>
+          <Input name="search" placeholder="Search in dashboard..." icon="search" />
         ) : (
           <div className="flex gap-6">
             {navLinks.map((e) => (
