@@ -33,7 +33,10 @@ export const Sidebar = () => {
               <NavLink
                 to={child.to}
                 className={({ isActive }) =>
-                  classNames("px-5 py-3.5 rounded-primary w-full", isActive ? "bg-primary font-bold" : "bg-transparent")
+                  classNames(
+                    "px-5 py-3.5 rounded-primary w-full",
+                    isActive ? "bg-primary font-bold" : "bg-transparent hover:text-primary"
+                  )
                 }
                 key={child.to}
               >
@@ -56,13 +59,13 @@ export const Sidebar = () => {
               className={({ isActive }) =>
                 classNames(
                   "px-5 py-4 rounded-primary w-full flex items-center",
-                  isActive ? "bg-primary font-bold" : "bg-transparent"
+                  isActive ? "bg-primary font-bold" : "bg-transparent hover:text-primary"
                 )
               }
             >
               <Icon icon="comment" className="w-6 h-6 mr-3" />
               <span>Inbox</span>
-              <div className="bg-red h-5 w-5 rounded-md text-sm ml-2 text-center">5</div>
+              <div className="bg-red h-5 w-5 rounded-md text-sm ml-2 text-center text-white">5</div>
             </NavLink>
           </div>
         </div>

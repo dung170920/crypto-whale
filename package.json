@@ -12,8 +12,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.5",
+    "apexcharts": "^3.42.0",
     "classnames": "^2.3.2",
     "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
     "react-country-flag": "^3.1.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^4.0.11",
