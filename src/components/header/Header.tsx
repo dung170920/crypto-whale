@@ -18,7 +18,13 @@ export const Header = () => {
           <Icon icon="solid-grid-2" className="w-6 h-6" />
         </button>
         {isAuthenticated ? (
-          <Input name="search" placeholder="Search in dashboard..." icon="search" className="text-sm !mb-0" />
+          <Input
+            name="search"
+            placeholder="Search in dashboard..."
+            icon="search"
+            className="text-sm !mb-0"
+            showDivider={false}
+          />
         ) : (
           <div className="flex gap-6">
             {navLinks.map((e) => (

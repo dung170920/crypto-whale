@@ -1,4 +1,5 @@
 import { Icon } from "@/components";
+import classNames from "classnames";
 import { useState } from "react";
 
 interface InputProps {
@@ -8,19 +9,28 @@ interface InputProps {
   icon?: string;
   isPassword?: boolean;
   className?: string;
+  showDivider?: boolean;
 }
 
-export const Input = ({ label, name, placeholder, icon, isPassword = false, className }: InputProps) => {
+export const Input = ({
+  label,
+  name,
+  placeholder,
+  icon,
+  isPassword = false,
+  showDivider = true,
+  className = "",
+}: InputProps) => {
   const [inputVisibility, setInputVisibility] = useState(false);
 
   return (
     <div className={`mb-4 ${className}`}>
-      <label htmlFor={name} className="font-semibold mb-2">
+      <label htmlFor={name} className="mb-2 font-semibold">
         {label}
       </label>
       <div className="relative flex items-center px-5 bg-gray-700 border border-transparent rounded-3xl focus-within:border-primary focus-within:ring-primary">
         {icon && (
-          <div className="pr-3 border-r border-gray-500">
+          <div className={classNames(showDivider ? "pr-3 border-r border-gray-500" : "")}>
             <Icon className="w-6 h-6 text-white" icon={icon} />
           </div>
         )}

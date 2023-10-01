@@ -4,7 +4,7 @@ interface CodeInputProps {
   className?: string;
 }
 
-export const CodeInput = ({ name, placeholder, className }: CodeInputProps) => {
+export const CodeInput = ({ name, placeholder, className = "" }: CodeInputProps) => {
   return (
     <div
       className={`mb-4 bg-gray-700 border border-transparent rounded-3xl focus-within:border-primary focus-within:ring-primary ${className}`}

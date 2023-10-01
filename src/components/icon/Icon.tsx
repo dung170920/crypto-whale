@@ -6,6 +6,6 @@ interface IconProps {
   className?: string;
 }
 
-export const Icon = ({ icon, className }: IconProps) => {
+export const Icon = ({ icon, className = "" }: IconProps) => {
   return <IcoMoon iconSet={iconSet} icon={icon} className={className} />;
 };

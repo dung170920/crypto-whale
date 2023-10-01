@@ -296,6 +296,8 @@ export const Chart = () => {
   const [options, setOptions] = useState<ApexOptions>({
     chart: {
       id: "chart",
+      fontFamily: "'Poppins', sans-serif",
+      foreColor: "#A4A8AB",
       toolbar: {
         autoSelected: undefined,
         show: false,
@@ -318,8 +320,6 @@ export const Chart = () => {
       strokeWidth: 3,
     },
     tooltip: {
-      // cssClass: "bg-gray-800/53 border border-gray-600 backdrop-blur-lg",
-
       theme: "dark",
       x: {
         format: "MMM dd, yyyy",
@@ -333,6 +333,7 @@ export const Chart = () => {
     dataLabels: {
       enabled: false,
     },
+
     stroke: {
       width: 3,
     },

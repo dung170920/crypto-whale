@@ -16,7 +16,7 @@
   }
 
   input {
-    @apply outline-none bg-transparent;
+    @apply bg-transparent outline-none;
   }
 
   input:-webkit-autofill,
@@ -30,11 +30,11 @@
   }
 
   *::-webkit-scrollbar {
-    @apply w-2 h-2 bg-transparent hover:bg-white/10 rounded-full;
+    @apply w-2 h-2 bg-transparent rounded-full hover:bg-white/10;
   }
 
   *::-webkit-scrollbar-thumb {
-    @apply bg-white/20 rounded-full;
+    @apply rounded-full bg-white/20;
   }
 }
 

@@ -13,7 +13,7 @@ interface IconButtonProps {
 
 export const IconButton = ({
   icon,
-  className,
+  className = "",
   onClick,
   type = "filled",
   color = "primary",

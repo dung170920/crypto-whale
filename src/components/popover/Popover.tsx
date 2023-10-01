@@ -29,11 +29,11 @@ interface PopoverProps {
 }
 
 export const Popover = ({
-  contentClassName,
+  contentClassName = "",
   trigger,
   content,
   hasIcon = false,
-  className,
+  className = "",
   header,
   placement = "bottom-end",
 }: PopoverProps) => {

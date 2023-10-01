@@ -14,8 +14,12 @@ export * from "./popover/Popover";
 
 export * from "./progress/Progress";
 
-export * from "./form/Input";
-export * from "./form/CodeInput";
+export * from "./progress/Progress";
+
+export * from "./dropdown/Dropdown";
+
+export * from "./input/Input";
+export * from "./input/CodeInput";
 
 export * from "./buttons/Button";
 export * from "./buttons/IconButton";

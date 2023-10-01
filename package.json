@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.1.0",
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.5",
+    "@tanstack/react-table": "^8.10.3",
     "apexcharts": "^3.42.0",
     "classnames": "^2.3.2",
+    "dayjs": "^1.11.10",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-country-flag": "^3.1.0",

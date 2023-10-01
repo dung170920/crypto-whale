@@ -12,7 +12,7 @@ interface ButtonProps {
 
 export const Button = ({
   children,
-  className,
+  className = "",
   onClick,
   type = "filled",
   color = "primary",
