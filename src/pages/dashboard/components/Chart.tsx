@@ -13,7 +13,7 @@ export const Chart = () => {
   ];
   const series = [
     {
-      name: "$",
+      name: "",
       data: [
         [1627359600000, 30.95],
         [1627446000000, 31.34],
@@ -321,19 +321,32 @@ export const Chart = () => {
     },
     tooltip: {
       theme: "dark",
+      style: {
+        fontSize: "16px",
+      },
       x: {
         format: "MMM dd, yyyy",
+      },
+      y: {
+        formatter: function (val) {
+          return "$" + val;
+        },
       },
     },
     colors: ["#0caf6080"],
     xaxis: {
       type: "datetime",
       tickAmount: 6,
+      axisBorder: {
+        show: false,
+      },
+      axisTicks: {
+        show: false,
+      },
     },
     dataLabels: {
       enabled: false,
     },
-
     stroke: {
       width: 3,
     },

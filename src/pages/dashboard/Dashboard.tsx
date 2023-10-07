@@ -9,7 +9,7 @@ const Dashboard = () => {
           <Chart />
           <Activities />
         </div>
-        <div className="w-1/3 bg-red">
+        <div className="w-1/3">
           <Balance />
           <QuickExchange />
         </div>
