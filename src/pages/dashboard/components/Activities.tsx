@@ -74,7 +74,7 @@ const timeList: DropdownBase[] = [{ name: "Aug 2023", value: "9" }];
 export const Activities = () => {
   const [duration, setDuration] = useState<DropdownBase>(durationList[0]);
   const [time, setTime] = useState<DropdownBase>(timeList[0]);
-  const [data] = useState(() => makeData(5));
+  const [data] = useState(() => makeData(3));
   const [sorting, setSorting] = useState<SortingState>([]);
   const table = useReactTable({
     data,

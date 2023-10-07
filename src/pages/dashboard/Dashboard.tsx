@@ -9,7 +9,7 @@ const Dashboard = () => {
           <Chart />
           <Activities />
         </div>
-        <div className="w-1/3">
+        <div className="w-1/3 flex flex-col">
           <Balance />
           <QuickExchange />
         </div>

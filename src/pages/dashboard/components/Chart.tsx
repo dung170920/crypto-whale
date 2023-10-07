@@ -427,7 +427,7 @@ export const Chart = () => {
         </div>
       </div>
       <div className="">
-        <ApexChart options={options} series={series} type="area" height={300} />
+        <ApexChart options={options} series={series} type="area" height={250} />
       </div>
     </div>
   );

@@ -52,10 +52,10 @@ export const Balance = () => {
         <ApexChart series={series} options={options} type="donut" />
       </div>
       <div className="grid grid-cols-4">
-        <ApexChart series={series} options={options} type="radialBar" />
-        <ApexChart series={series} options={options} type="radialBar" />
-        <ApexChart series={series} options={options} type="radialBar" />
-        <ApexChart series={series} options={options} type="radialBar" />
+        <ApexChart series={series} options={options} type="donut" />
+        <ApexChart series={series} options={options} type="donut" />
+        <ApexChart series={series} options={options} type="donut" />
+        <ApexChart series={series} options={options} type="donut" />
       </div>
     </section>
   );
