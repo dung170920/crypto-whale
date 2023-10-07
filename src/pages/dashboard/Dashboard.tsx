@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <section className="space-y-7">
       <div className="flex gap-5">
-        <div className="w-2/3 space-y-5">
+        <div className="w-2/3">
           <BaseStats />
           <Chart />
           <Activities />

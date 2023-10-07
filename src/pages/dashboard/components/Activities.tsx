@@ -1,6 +1,6 @@
-import { Icon, Input } from "@/components";
+import { Dropdown, Icon, IconButton } from "@/components";
 import { makeData } from "@/constants";
-import { Activity, ActivityStatus, TransactionType } from "@/types";
+import { Activity, ActivityStatus, DropdownBase, TransactionType } from "@/types";
 import {
   SortingState,
   createColumnHelper,
@@ -63,7 +63,17 @@ const columns = [
   }),
 ];
 
+const durationList: DropdownBase[] = [
+  { name: "Last 30 Days", value: "30" },
+  { name: "Last 10 Days", value: "10" },
+  { name: "Last 1 Days", value: "1" },
+];
+
+const timeList: DropdownBase[] = [{ name: "Aug 2023", value: "9" }];
+
 export const Activities = () => {
+  const [duration, setDuration] = useState<DropdownBase>(durationList[0]);
+  const [time, setTime] = useState<DropdownBase>(timeList[0]);
   const [data] = useState(() => makeData(5));
   const [sorting, setSorting] = useState<SortingState>([]);
   const table = useReactTable({
@@ -82,14 +92,18 @@ export const Activities = () => {
     <section className="px-5 py-6">
       <div className="flex items-center justify-between">
         <h4 className="font-semibold">Recent Activities</h4>
-        <div className="flex">
-          <Input
-            name="search"
-            placeholder="Search in dashboard..."
-            icon="search"
-            className="text-sm !mb-0"
-            showDivider={false}
-          />
+        <div className="items-center gap-3 hidden xl:flex">
+          <Dropdown handleClick={(value) => setDuration(value)} items={durationList} className="h-14">
+            {duration.name}
+          </Dropdown>
+          <Dropdown handleClick={(value) => setTime(value)} items={timeList} className="h-14">
+            {time.name}
+          </Dropdown>
+          <div className="flex items-center bg-gray-800 border border-gray-600 py-1  rounded-primary pl-5 pr-1">
+            <Icon icon="search" className="h-5 w-5" />
+            <input type="text" placeholder="Search" className="text-sm ml-4" />
+            <IconButton icon="solid-sort-descending" size="sm" />
+          </div>
         </div>
       </div>
       <div className="w-full overflow-x-scroll mt-7">

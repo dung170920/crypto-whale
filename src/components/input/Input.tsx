@@ -9,6 +9,7 @@ interface InputProps {
   icon?: string;
   isPassword?: boolean;
   className?: string;
+  inputClassName?: string;
   showDivider?: boolean;
 }
 
@@ -20,6 +21,7 @@ export const Input = ({
   isPassword = false,
   showDivider = true,
   className = "",
+  inputClassName = "",
 }: InputProps) => {
   const [inputVisibility, setInputVisibility] = useState(false);
 
@@ -28,7 +30,9 @@ export const Input = ({
       <label htmlFor={name} className="mb-2 font-semibold">
         {label}
       </label>
-      <div className="relative flex items-center px-5 bg-gray-700 border border-transparent rounded-3xl focus-within:border-primary focus-within:ring-primary">
+      <div
+        className={`relative flex items-center px-5 bg-gray-700 border border-transparent rounded-3xl focus-within:border-primary focus-within:ring-primary ${inputClassName}`}
+      >
         {icon && (
           <div className={classNames(showDivider ? "pr-3 border-r border-gray-500" : "")}>
             <Icon className="w-6 h-6 text-white" icon={icon} />
