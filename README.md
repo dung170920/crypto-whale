@@ -4,6 +4,8 @@
 
 ![Preview](https://github.com/dung170920/crypto-whale/blob/main/src/assets/images/preview.jpg)
 
+- Demo: https://crypto-whale.netlify.app/
+
 - Design: [Crypto Whale - Crypto & NFT Dashboard UI Kit](https://ui8.net/uimonster/products/crypto-whale-crypto-dashboard-ui-kit)
 
 ## Technologies
