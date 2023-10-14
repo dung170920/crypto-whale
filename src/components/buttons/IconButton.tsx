@@ -41,7 +41,7 @@ export const IconButton = ({
       disabled={disabled}
       onClick={onClick}
       className={classNames(
-        "flex items-center justify-center",
+        "flex items-center justify-center cursor-pointer",
         buttonConfig[size],
         type === "outlined" ? buttonConfig[color].outline : buttonConfig[color].bgColor,
         `rounded-primary ${className}`,

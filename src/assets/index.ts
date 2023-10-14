@@ -7,3 +7,5 @@ import { ReactComponent as Google } from "./svgs/google.svg";
 import { ReactComponent as ForgotPasswordIllustration } from "./svgs/forgot-password-illustration.svg";
 
 export { LogoIcon, Bug, QrCode, FB, Apple, Google, ForgotPasswordIllustration };
+
+export { default as chart } from "./images/chart.png";

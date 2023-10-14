@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @import "./apexchart";
+@import "./swiper";
 
 @layer base {
   * {
@@ -14,7 +15,7 @@
   }
 
   body {
-    @apply font-serif text-base text-white bg-gray-700;
+    @apply font-serif text-base text-white bg-gray-700 relative;
   }
 
   input {

@@ -9,6 +9,7 @@ interface DropdownProps<T> {
   className?: string;
   items: T[];
   handleClick: (value: T) => void;
+  size?: "sm" | "md";
 }
 
 export const Dropdown = <T extends DropdownBase>({
@@ -16,13 +17,20 @@ export const Dropdown = <T extends DropdownBase>({
   items,
   className = "",
   handleClick,
+  size = "md",
 }: DropdownProps<T>) => {
+  const sizes = {
+    sm: "px-3 py-[6px] text-xs rounded-lg",
+    md: " py-3 px-5 text-sm rounded-primary",
+  };
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
           className={classNames(
-            "flex items-center justify-center gap-x-3 rounded-primary border border-gray-600 py-3 px-5 text-sm text-secondary bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary",
+            "flex items-center justify-center border border-gray-600 text-secondary bg-gray-800 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary",
+            sizes[size],
             className
           )}
         >

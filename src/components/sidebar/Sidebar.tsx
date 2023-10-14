@@ -6,15 +6,15 @@ import { NavLink } from "react-router-dom";
 export const Sidebar = () => {
   return (
     <aside className="h-screen bg-gray-800 w-[252px] flex flex-col">
-      <div className="flex items-center justify-center p-6 border-b-2 border-r-2 border-gray-700 relative">
+      <div className="relative flex items-center justify-center p-6 border-b-2 border-r-2 border-gray-700">
         <Logo />
-        <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-gray-800 h-11 w-11 border-2 rounded-full border-gray-700">
-          <Icon icon="angle-left" className="h-6 w-6 text-gray-600" />
+        <button className="absolute right-0 translate-x-1/2 -translate-y-1/2 bg-gray-800 border-2 border-gray-700 rounded-full top-1/2 h-11 w-11">
+          <Icon icon="angle-left" className="w-6 h-6 text-gray-600" />
         </button>
       </div>
       <div className="flex flex-col items-center flex-1 py-5 overflow-hidden">
         <div className="w-full px-6">
-          <div className="w-14 h-14 mx-auto overflow-hidden rounded-primary">
+          <div className="mx-auto overflow-hidden w-14 h-14 rounded-primary">
             <img
               src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
               alt=""
@@ -34,7 +34,7 @@ export const Sidebar = () => {
                 to={child.to}
                 className={({ isActive }) =>
                   classNames(
-                    "px-5 py-3.5 rounded-primary w-full",
+                    "px-5 py-3.5 rounded-primary w-full whitespace-nowrap",
                     isActive ? "bg-primary font-bold" : "bg-transparent hover:text-primary"
                   )
                 }
@@ -65,7 +65,7 @@ export const Sidebar = () => {
             >
               <Icon icon="comment" className="w-6 h-6 mr-3" />
               <span>Inbox</span>
-              <div className="bg-red h-5 w-5 rounded-md text-sm ml-2 text-center text-white">5</div>
+              <div className="w-5 h-5 ml-2 text-sm text-center text-white rounded-md bg-red">5</div>
             </NavLink>
           </div>
         </div>
