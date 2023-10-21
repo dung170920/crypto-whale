@@ -1,11 +1,12 @@
 import { Icon, IconButton, Input, Logo, Popover } from "@/components";
-import { languages, navLinks } from "@/constants";
+import { languages, path } from "@/constants";
 import classNames from "classnames";
 import { useState } from "react";
 import ReactCountryFlag from "react-country-flag";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
+  const navigate = useNavigate();
   const isAuthenticated = true;
 
   const [language, setLanguage] = useState(languages[0]);
@@ -13,39 +14,21 @@ export const Header = () => {
   return (
     <header className="flex items-center justify-between px-10 py-4 bg-gray-800 h-[90px]">
       <div className="flex items-center gap-8">
-        {!isAuthenticated && <Logo />}
-        <button>
-          <Icon icon="solid-grid-2" className="w-6 h-6" />
-        </button>
         {isAuthenticated ? (
-          <Input
-            name="search"
-            placeholder="Search in dashboard..."
-            icon="search"
-            className="text-sm !mb-0"
-            showDivider={false}
-          />
+          <>
+            <button>
+              <Icon icon="solid-grid-2" className="w-6 h-6" />
+            </button>
+            <Input
+              name="search"
+              placeholder="Search in dashboard..."
+              icon="search"
+              className="text-sm !mb-0"
+              showDivider={false}
+            />
+          </>
         ) : (
-          <div className="flex gap-6">
-            {navLinks.map((e) => (
-              <NavLink
-                to={e.to}
-                key={e.to}
-                className={({ isActive }) =>
-                  classNames(
-                    "hover:text-primary transition-colors",
-                    {
-                      "relative after:absolute after:-top-5 after:-right-9 after:text-white after:bg-orange after:content-['New'] after:px-[6px] after:rounded-md after:text-2xs mr-7 before:border-8 before:border-orange before:border-t-transparent before:border-r-transparent before:border-b-transparent before:absolute before:-top-2 before:-right-6":
-                        e.isNew,
-                    },
-                    { "text-primary": isActive }
-                  )
-                }
-              >
-                {e.text}
-              </NavLink>
-            ))}
-          </div>
+          <Logo />
         )}
       </div>
       <div className="flex gap-3">
@@ -95,7 +78,7 @@ export const Header = () => {
         />
         {isAuthenticated && (
           <>
-            <IconButton icon="wallet" color="secondary" />
+            <IconButton icon="wallet" color="secondary" onClick={() => navigate(path.wallet)} />
             <IconButton icon="settings" color="secondary" />
             <IconButton icon="bell" color="secondary" />
           </>

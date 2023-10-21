@@ -38,7 +38,7 @@ export const PublicRoutes: RouteObject[] = [
     ],
   },
   {
-    path: path.error,
+    path: path.home,
     element: <Blank />,
     children: [
       { path: path.notFound, element: <NotFoundPage /> },

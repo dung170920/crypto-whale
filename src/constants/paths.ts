@@ -7,4 +7,10 @@ export const path = {
   error: "*",
   notFound: "404",
   home: "/",
+  exchange: "/exchange",
+  prices: "/prices",
+  wallet: "/wallet",
+  nft: "/nft",
+  transaction: "/transaction",
+  blog: "/blog",
 };
