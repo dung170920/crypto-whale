@@ -13,4 +13,5 @@ export const path = {
   nft: "/nft",
   transaction: "/transaction",
   blog: "/blog",
+  inbox: "/inbox",
 };

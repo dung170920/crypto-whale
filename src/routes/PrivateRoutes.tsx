@@ -10,6 +10,7 @@ const WalletPage = lazy(() => import("@/pages/wallet/Wallet"));
 const NFTPage = lazy(() => import("@/pages/nft/NFT"));
 const TransactionPage = lazy(() => import("@/pages/transaction/Transaction"));
 const BlogPage = lazy(() => import("@/pages/blog/Blog"));
+const InboxPage = lazy(() => import("@/pages/inbox/Inbox"));
 
 const Authenticated = ({ children }: { children: React.ReactElement }) => {
   const auth = true;
@@ -52,6 +53,10 @@ export const PrivateRoutes: RouteObject[] = [
       {
         path: path.blog,
         element: <BlogPage />,
+      },
+      {
+        path: path.inbox,
+        element: <InboxPage />,
       },
     ],
   },

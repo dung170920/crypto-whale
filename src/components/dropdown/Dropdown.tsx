@@ -61,7 +61,7 @@ export const Dropdown = <T extends DropdownBase>({
                     }}
                     className={classNames(
                       active ? "bg-gray-600 text-white" : "text-secondary",
-                      "block px-4 py-2 text-sm w-full"
+                      "block px-4 py-2 text-sm w-full text-left"
                     )}
                   >
                     {item.name}

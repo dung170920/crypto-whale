@@ -1,5 +1,5 @@
 import { Icon, Logo } from "@/components";
-import { sideLinks } from "@/constants";
+import { path, sideLinks } from "@/constants";
 import classNames from "classnames";
 import { NavLink } from "react-router-dom";
 
@@ -8,9 +8,6 @@ export const Sidebar = () => {
     <aside className="h-screen bg-gray-800 w-[252px] flex flex-col">
       <div className="relative flex items-center justify-center p-6 border-b-2 border-r-2 border-gray-700">
         <Logo />
-        <button className="absolute right-0 translate-x-1/2 -translate-y-1/2 bg-gray-800 border-2 border-gray-700 rounded-full top-1/2 h-11 w-11 group">
-          <Icon icon="angle-left" className="w-6 h-6 text-gray-600 group-hover:text-white" />
-        </button>
       </div>
       <div className="flex flex-col items-center py-4 overflow-hidden">
         <button className="w-full px-6">
@@ -55,7 +52,7 @@ export const Sidebar = () => {
           <div className="flex flex-col mt-4">
             <span className="text-sm">Insignts</span>
             <NavLink
-              to="/inbox"
+              to={path.inbox}
               className={({ isActive }) =>
                 classNames(
                   "px-5 py-3.5 rounded-primary w-full flex items-center",
